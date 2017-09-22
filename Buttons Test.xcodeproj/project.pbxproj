@@ -13,6 +13,8 @@
 		42475ED71F6E3C34000BBA2F /* Buttons_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42475ED51F6E3C34000BBA2F /* Buttons_Test.xcdatamodeld */; };
 		42475ED91F6E3C34000BBA2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42475ED81F6E3C34000BBA2F /* Assets.xcassets */; };
 		42475EDC1F6E3C34000BBA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42475EDA1F6E3C34000BBA2F /* LaunchScreen.storyboard */; };
+		42475EE41F6E3E36000BBA2F /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42475EE31F6E3E36000BBA2F /* UIButtonExtension.swift */; };
+		42475EE61F6E3F03000BBA2F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42475EE51F6E3F03000BBA2F /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		42475ED81F6E3C34000BBA2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42475EDB1F6E3C34000BBA2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42475EDD1F6E3C34000BBA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42475EE31F6E3E36000BBA2F /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		42475EE51F6E3F03000BBA2F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				42475EDA1F6E3C34000BBA2F /* LaunchScreen.storyboard */,
 				42475EDD1F6E3C34000BBA2F /* Info.plist */,
 				42475ED51F6E3C34000BBA2F /* Buttons_Test.xcdatamodeld */,
+				42475EE31F6E3E36000BBA2F /* UIButtonExtension.swift */,
+				42475EE51F6E3F03000BBA2F /* Helpers.swift */,
 			);
 			path = "Buttons Test";
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42475ED11F6E3C34000BBA2F /* ViewController.swift in Sources */,
+				42475EE41F6E3E36000BBA2F /* UIButtonExtension.swift in Sources */,
 				42475ED71F6E3C34000BBA2F /* Buttons_Test.xcdatamodeld in Sources */,
+				42475EE61F6E3F03000BBA2F /* Helpers.swift in Sources */,
 				42475ECF1F6E3C34000BBA2F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YEP43V2YP;
 				INFOPLIST_FILE = "Buttons Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wild.Buttons-Test";
@@ -293,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YEP43V2YP;
 				INFOPLIST_FILE = "Buttons Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wild.Buttons-Test";
