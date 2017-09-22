@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var saveLabel: UILabel!
     var counterValue = 0
     var savedWorkouts = ["No saved workouts"]
+    var workoutsSaved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,19 +55,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         saveButton.wiggleSideways()
+        
         saveCount(counter: counterValue)
+        workoutsSaved = true
         
-        var currentDateTime = Date()
+        saveButton.setTitle("Saved ✅", for: .normal)
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .medium
-        
-        var savedNumberPlusDate = "\(counterValue) : \(dateFormatter.string(from: currentDateTime))"
-        saveLabel.text = savedNumberPlusDate
-
         //cast it as a string
         counter.text = String(counterValue)
-        saveButton.setTitle("Saved ✅", for: .normal)
         
         //don't forget to zero it out.
         counterValue = 0
@@ -95,11 +91,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func saveCount(counter: Int) {
-        print("Counter Value to save: \(counter)")
-        savedWorkouts.append("Saved a workout!")
+        let workoutRecord = generateWorkout()
+        
+        if workoutsSaved == false {
+            savedWorkouts = []
+            savedWorkouts.append(workoutRecord)
+        } else {
+            savedWorkouts.append(workoutRecord)
+        }
+        
         //don't forget to reload the data
         bottomTableView.reloadData()
-        //TODO save the count
+        //TODO save the count to CoreData?
+        
+        saveLabel.text = workoutRecord
+    }
+    
+    func generateWorkout() -> String {
+        let currentDateTime = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .long
+        
+        let workoutRecord = "\(counterValue) pushups at : \(dateFormatter.string(from: currentDateTime))"
+        return workoutRecord
     }
 
 }
