@@ -111,7 +111,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let currentDateTime = Date()
         
         let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .long
+        //dateFormatter.timeStyle = .long
+        dateFormatter.dateFormat = "MMM d, yyyy - h:mm a"
         
         let workoutRecord = "\(counterValue) pushups at : \(dateFormatter.string(from: currentDateTime))"
         return workoutRecord
