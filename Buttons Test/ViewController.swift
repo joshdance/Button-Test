@@ -16,12 +16,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var counter: UILabel!
     @IBOutlet weak var bottomTableView: UITableView!
     @IBOutlet weak var saveLabel: UILabel!
-    var counterValue = 0
+    var workout: Workout!
+    //var counterValue = 0
     var savedWorkouts = ["No saved workouts"]
     var workoutsSaved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        workout = Workout()
+        workout.counterValue = 0
         saveLabel.text = ""
         //this is the data source for the tableview.
         bottomTableView.dataSource = self
@@ -56,37 +59,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func saveButtonTapped(_ sender: Any) {
         saveButton.wiggleSideways()
         
-        saveCount(counter: counterValue)
+        saveCount(counter: workout.counterValue)
         workoutsSaved = true
         
         saveButton.setTitle("Saved ✅", for: .normal)
         
         //cast it as a string
-        counter.text = String(counterValue)
+        counter.text = String(workout.counterValue)
         
         //don't forget to zero it out.
-        counterValue = 0
+        workout.counterValue = 0
     }
     
     @IBAction func upButtonTapped(_ sender: Any) {
         upButton.wiggleUp()
-        counterValue = counterValue + 1
+        workout.counterValue = workout.counterValue + 1
         //cast it as a string
-        counter.text = String(counterValue)
+        counter.text = String(workout.counterValue)
         saveButton.setTitle("Saved 💾", for: .normal)
     }
     
     @IBAction func downButtonTapped(_ sender: Any) {
-        if counterValue != 0 {
-        counterValue = counterValue - 1
+        if workout.counterValue != 0 {
+        workout.counterValue = workout.counterValue - 1
         downButton.wiggleDown()
         } else {
-            counterValue = 0
+            workout.counterValue = 0
             downButton.wiggleNo()
         }
         
         //cast it as a string
-        counter.text = String(counterValue)
+        counter.text = String(workout.counterValue)
         saveButton.setTitle("Saved 💾", for: .normal)
     }
     
@@ -114,7 +117,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //dateFormatter.timeStyle = .long
         dateFormatter.dateFormat = "MMM d, yyyy - h:mm a"
         
-        let workoutRecord = "\(counterValue) pushups at : \(dateFormatter.string(from: currentDateTime))"
+        let workoutRecord = "\(workout.counterValue) pushups at : \(dateFormatter.string(from: currentDateTime))"
         return workoutRecord
     }
 

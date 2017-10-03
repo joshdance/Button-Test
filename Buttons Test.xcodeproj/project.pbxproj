@@ -15,6 +15,7 @@
 		42475EDC1F6E3C34000BBA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42475EDA1F6E3C34000BBA2F /* LaunchScreen.storyboard */; };
 		42475EE41F6E3E36000BBA2F /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42475EE31F6E3E36000BBA2F /* UIButtonExtension.swift */; };
 		42475EE61F6E3F03000BBA2F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42475EE51F6E3F03000BBA2F /* Helpers.swift */; };
+		42D81F3A1F835BF200FA2370 /* workout class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D81F391F835BF200FA2370 /* workout class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		42475EDD1F6E3C34000BBA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42475EE31F6E3E36000BBA2F /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		42475EE51F6E3F03000BBA2F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		42D81F391F835BF200FA2370 /* workout class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "workout class.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				42475ED51F6E3C34000BBA2F /* Buttons_Test.xcdatamodeld */,
 				42475EE31F6E3E36000BBA2F /* UIButtonExtension.swift */,
 				42475EE51F6E3F03000BBA2F /* Helpers.swift */,
+				42D81F391F835BF200FA2370 /* workout class.swift */,
 			);
 			path = "Buttons Test";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				42475ED11F6E3C34000BBA2F /* ViewController.swift in Sources */,
 				42475EE41F6E3E36000BBA2F /* UIButtonExtension.swift in Sources */,
 				42475ED71F6E3C34000BBA2F /* Buttons_Test.xcdatamodeld in Sources */,
+				42D81F3A1F835BF200FA2370 /* workout class.swift in Sources */,
 				42475EE61F6E3F03000BBA2F /* Helpers.swift in Sources */,
 				42475ECF1F6E3C34000BBA2F /* AppDelegate.swift in Sources */,
 			);
