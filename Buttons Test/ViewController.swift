@@ -44,11 +44,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = bottomTableView.dequeueReusableCell(withIdentifier: "reuseId")
-        
         let text = savedWorkouts[indexPath.row]
-        
         cell?.textLabel?.text = text
-        
         return cell!
     }
     
@@ -58,15 +55,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         saveButton.wiggleSideways()
-        
         saveCount(counter: workout.counterValue)
         workoutsSaved = true
-        
         saveButton.setTitle("Saved ✅", for: .normal)
-        
         //cast it as a string
         counter.text = String(workout.counterValue)
-        
         //don't forget to zero it out.
         workout.counterValue = 0
     }
